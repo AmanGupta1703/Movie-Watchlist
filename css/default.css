@@ -1,0 +1,109 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* FONT-FAMILY BODY */
+    --ff-primary: 'Inter', sans-serif;
+
+    /* FONT SIZES */
+    --fs-12: 0.75rem;
+    --fs-14: 0.875rem;
+    --fs-18: 1.125rem;
+    --fs-43: 2.6875rem;
+
+    /* BORDER RADIUS */
+    --br-6: 0.375rem;
+
+    /* COLOR PALETTE */
+    --clr-grey-1: #121212;
+    --clr-grey-2: #2E2E2F;
+    --clr-grey-3: #4B4B4B;
+    --clr-grey-4: #A5A5A5;
+    --clr-grey-5: #2C2C2C;
+    --clr-grey-6: #787878;
+
+
+    --clr-white: #FFFFFF;
+
+    /* FONT WEIGHT */
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-800: 800;
+
+
+    /* BOX SHADOW */
+    --bs-1: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input {
+    outline: none;
+}
+
+input,
+button {
+    background: transparent;
+    border: none;
+}
+
+.btn {
+    cursor: pointer;
+}

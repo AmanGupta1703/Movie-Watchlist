@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies WatchList App</title>
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+
+            <div class="header--top">
+
+                <a href="/" class="header--title">Find your film</a>
+
+                <a href="./watchlist.html" class="btn watchlist-btn">My Watchlist</a>
+
+            </div>
+
+            <div class="header--navigation-bar">
+
+                <form class="header--form">
+                    <img src="./images/search-icon.png" alt="" class="header--search-icon">
+
+                    <input type="text" class="header--form-movie-title" name="movie-title" placeholder="Blade Runner"
+                        autocomplete="off">
+                </form>
+
+                <button class="btn search-btn">Search</button>
+
+            </div>
+
+        </header>
+
+        <main class="main-section">
+
+            <section class="main--container">
+
+                <div class="main--loading-screen"> 
+                    <img src="./images/film-icon.png" alt="" class="main--img">
+                    <h2 class="main--title">Start exploring</h2>
+                </div> 
+
+                <article class="main--card-container">
+                    
+                    <!-- <article class="main--card">
+
+                        <img src="./images/movie-banner.png" alt="" class="main--img-left">
+
+                        <div class="main--card-body">
+
+                            <div class="main--card__movieTitle__rating">
+
+                                <h3 class="main--card__movie-title">Blade Runner</h3>
+
+                                <img src="./images/star-icon.png" alt="" class="main--card__star-icon">
+
+                                <p class="main--card__rating-number">8.1</p>
+
+
+                            </div>
+
+                            <div class="main--card__about--movie">
+
+                                <p class="main--card__total-minutes">116 min</p>
+                                <p class="main--card__genre">Drama, Mystery, Sci-fi</p>
+
+                                <button class="btn add-btn">
+                                    <img src="./images/add-icon.png" alt="" class="main--card__add-icon">
+                                    Watchlist
+                                </button>
+
+                            </div>
+
+                            <p class="main--card__movie-summary">A blade runner must pursue and terminate four
+                                replicants
+                                who stole a
+                                ship in space, and have returned to Earth to find their creator.</p>
+
+                        </div>
+
+
+                    </article> -->
+
+                    <!-- <div class="divider"></div> -->
+                    
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script type="module" src="./javascript/app.js"></script>
+</body>
+
+</html>

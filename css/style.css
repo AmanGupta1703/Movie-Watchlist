@@ -1,0 +1,204 @@
+
+.container {
+    max-width: 550px;
+}
+
+body {
+    font-family: var(--ff-primary);
+    background: var(--clr-grey-1);
+}
+
+.header {
+    color: var(--clr-white);
+    background: var(--clr-grey-1) url("../images/hero-img.png") center center;
+    background-size: cover;
+    height: 208px;
+    padding: 5.13em 2.63em;
+    position: relative;
+}
+
+.header--top,
+.header--navigation-bar,
+.header--form {
+    display: flex;
+    align-items: center;
+}
+
+/* START header--top */
+.header--top { 
+    justify-content: space-between;
+}
+
+.header--title {
+    color: var(--clr-white);
+    font-size: var(--fs-43);
+    font-weight: var(--fw-800);
+    text-decoration: none;
+}
+
+.watchlist-btn {
+    color: var(--clr-white);
+    font-size: var(--fs-14);
+    font-weight: var(--fw-700);
+    text-decoration: none;
+    padding: 0;
+}
+/* END header--top */
+
+
+/* START header--navigation-bar */
+.header--navigation-bar {
+    box-shadow: var(--bs-1);
+    justify-content: center;
+    width: 462px;
+    margin: 0 auto;
+
+    position: absolute;
+    bottom: -1rem;
+}
+
+.header--form {
+    border-top-left-radius: var(--br-6);
+    border-bottom-left-radius: var(--br-6);
+    background: var(--clr-grey-2);
+    padding: 0.563em 0.813em;
+    width: 390px;
+}
+
+.header--search-icon {
+    height: 100%;
+    margin-right: 0.625em;
+}
+
+.header--form-movie-title,
+.search-btn {
+    font-size: var(--fs-14);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-500);
+    color: var(--clr-white);
+}
+
+::placeholder {
+    font-family: inherit;
+}
+
+.search-btn {
+    border-top-right-radius: var(--br-6);
+    border-bottom-right-radius: var(--br-6);
+    background: var(--clr-grey-3);
+    padding: 0.643em 1.5em;
+}
+/* END header--navigation-bar */
+
+.main-section {
+    padding: 3.813em 2.75em 0;
+}
+
+/* START main--before-search */
+.main--loading-screen {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.main--title {
+    color: var(--clr-grey-2);
+    font-size: var(--fs-18);
+    font-weight: var(--fw-700);
+    margin: 0.5em 0 0;
+}
+/* END main--before-search */
+
+/* START main--card-container */
+.main--card,
+.main--card__movieTitle__rating,
+.main--card__about--movie,
+.main--card-body,
+.add-btn {
+    display: flex;
+}
+
+.main--card {
+    align-items: center;
+    color: var(--clr-white);
+    gap: 1.313em;
+    width: 461px;
+}
+
+.main--card-body {
+    flex-direction: column;
+    gap: 8px;
+}
+
+.main--card__movieTitle__rating,
+.main--card__about--movie,
+.add-btn {
+    align-items: center;
+}
+
+.main--img-left {
+    border-radius: 2.33px;
+    max-width: 100px;
+}
+
+
+/* START main--card__movieTitle__rating */
+.main--card__movieTitle__rating {
+    gap: 0.25em;
+}
+
+.main--card__movie-title {
+    font-size: var(--fs-18);
+    font-weight: var(--fw-500);
+}
+
+.main--card__star-icon {
+    height: 100%;
+}
+
+.main--card__rating-number {
+    font-size: var(--fs-12);
+}
+/* END main--card__movieTitle__rating */
+
+
+/* START main--card__about--movie */
+.main--card__about--movie {
+    gap: 1.25em;
+}
+
+.main--card__total-minutes,
+.main--card__genre,
+.add-btn,
+.main--card__movie-summary {
+    font-weight: var(--fw-400);
+}
+
+.main--card__total-minutes,
+.main--card__genre,
+.add-btn {
+    font-size: var(--fs-12);
+}
+
+.add-btn {
+    gap: 0.313em;
+    color: var(--clr-white);
+}
+
+.main--card__movie-summary {
+    font-size: var(--fs-14);
+    color: var(--clr-grey-4);
+    line-height: 1.5;
+}
+/* end main--card__about--movie */
+
+.divider {
+    background-color: var(--clr-grey-5);
+    width: 461px;
+    height: 2px;
+    margin: 1.313em 0 1.563em;
+}
+/* END main--card-container */
