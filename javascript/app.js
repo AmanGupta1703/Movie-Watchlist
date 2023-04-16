@@ -6,45 +6,50 @@ let addBtnEl;
 
 let watchListMovieArray = [];
 
+let movieListInLocalStorage;
+
 submitBtn.addEventListener("click", function () {
+  mainCardContainerEl.innerHTML = ``;
   getMovieData();
 });
 
-// GET THE MOVIE DATA FROM THE OMDb API 
-function getMovieData() {
+// GET THE MOVIE DATA FROM THE OMDb API
+async function getMovieData() {
   const movieTitleInput = document.querySelector('[name="movie-title"]');
+
   if (movieTitleInput.value) {
     const movieTitle = movieTitleInput.value;
-    fetch(`https://www.omdbapi.com/?s=${movieTitle}&apikey=8259adf`)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.Search) {
-          for (let element of data.Search) {
-            searchSingleMovie(element);
-          }
-        } else {
-          alert("No Movie Found");
-        }
-      });
+
+    const response = await fetch(
+      `https://www.omdbapi.com/?s=${movieTitle}&apikey=8259adf`
+    );
+    const data = await response.json();
+
+    if (data.Search) {
+      for (let element of data.Search) {
+        searchSingleMovie(element);
+      }
+    } else {
+      alert("No Movie Found");
+    }
   } else {
     alert("No movie title to search for...");
   }
+
   document.querySelector('[name="movie-title"]').value = "";
 }
 
-
 // SEARCH SINGLE MOVIE ACCORING TO THIER imdID
-function searchSingleMovie(element) {
-  mainCardContainerEl.innerHTML = ``;
+async function searchSingleMovie(element) {
   const imdID = element.imdbID;
 
-  fetch(`https://www.omdbapi.com/?i=${imdID}&apikey=8259adf`)
-    .then((response) => response.json())
-    .then((data) => {
-      generateHTML(data);
-    });
-}
+  const response = await fetch(
+    `https://www.omdbapi.com/?i=${imdID}&apikey=8259adf`
+  );
+  const data = await response.json();
 
+  generateHTML(data);
+}
 
 // GENERATE HTML AND ADD IT TO THE DOM
 function generateHTML(data) {
@@ -101,14 +106,14 @@ function generateHTML(data) {
   });
 }
 
-
 // TO ADD THE imdID OF SELECTED MOVIE TO THE ARRAY
 function addToWatchListArray(e) {
   const imdID = e.target.dataset.imdid;
 
   watchListMovieArray.push(imdID);
-  console.log(watchListMovieArray);
+
+  movieListInLocalStorage = localStorage.setItem(
+    "moviesList",
+    JSON.stringify(watchListMovieArray)
+  );
 }
-
-
-export default watchListMovieArray;

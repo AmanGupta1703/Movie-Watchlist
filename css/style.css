@@ -117,7 +117,8 @@ body {
 .main--card__movieTitle__rating,
 .main--card__about--movie,
 .main--card-body,
-.add-btn {
+.add-btn,
+.minus-btn {
     display: flex;
 }
 
@@ -135,7 +136,8 @@ body {
 
 .main--card__movieTitle__rating,
 .main--card__about--movie,
-.add-btn {
+.add-btn,
+.minus-btn {
     align-items: center;
 }
 
@@ -173,17 +175,20 @@ body {
 .main--card__total-minutes,
 .main--card__genre,
 .add-btn,
-.main--card__movie-summary {
+.main--card__movie-summary,
+.minus-btn {
     font-weight: var(--fw-400);
 }
 
 .main--card__total-minutes,
 .main--card__genre,
-.add-btn {
+.add-btn,
+.minus-btn {
     font-size: var(--fs-12);
 }
 
-.add-btn {
+.add-btn,
+.minus-btn {
     gap: 0.313em;
     color: var(--clr-white);
 }
